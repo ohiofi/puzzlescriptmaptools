@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hello!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <h3>Puzzlescript Map Tools</h3>
+    <button onclick="doubleWidth()">
+      2x Width
+    </button>
+    <button onclick="doubleHeight()">
+      2x Height
+    </button>
+    <button onclick="halfWidth()">
+      1/2 Width
+    </button>
+    <button onclick="halfHeight()">
+      1/2 Height
+    </button>
+    <button onclick="flipHorizontal()">
+      Flip Horizontal
+    </button>
+    <button onclick="flipVertical()">
+      Flip Vertical
+    </button>
+
+    <button onclick="mirrorLeft()">
+      Mirror Left*
+    </button>
+    <button onclick="mirrorRight()">
+      Mirror Right*
+    </button>
+    <button onclick="mirrorUp()">
+      Mirror Up*
+    </button>
+    <button onclick="mirrorDown()">
+      Mirror Down*
+    </button>
+    <br />
+    <label>
+      Paste your Puzzlescript map here:
+      <br />
+      <textarea id="txt1" cols="60" rows="30"></textarea>
+    </label>
+    <table>
+      <tr>
+        <td>*Mirror Left=</td>
+        <td>ab<br />cd</td>
+        <td>&rarr;</td>
+        <td><mark>ba</mark>ab<br /><mark>dc</mark>cd</td>
+      </tr>
+      <tr>
+        <td>*Mirror Right=</td>
+        <td>ab<br />cd</td>
+        <td>&rarr;</td>
+        <td>ab<mark>ba</mark><br />cd<mark>dc</mark></td>
+      </tr>
+      <tr>
+        <td>*Mirror Up=</td>
+        <td>ab<br />cd</td>
+        <td>&rarr;</td>
+        <td><mark>cd</mark><br /><mark>ab</mark><br />ab<br />cd</td>
+      </tr>
+      <tr>
+        <td>*Mirror Down=</td>
+        <td>ab<br />cd</td>
+        <td>&rarr;</td>
+        <td>ab<br />cd<br /><mark>cd</mark><br /><mark>ab</mark></td>
+      </tr>
+    </table>
+
+    <h3>
+      Dungeonscript Tools
+    </h3>
+    <button onclick="getStack()">
+        Stack
+      </button>
+    <button onclick="getFilledStairs()">
+        Filled Stairsteps
+      </button>
+    <button onclick="getEmptyStairs()">
+        Empty Stairsteps
+      </button>
+      <br />
+    <label>
+      Paste your Puzzlescript sprite here (include sprite name, colors, and sprite map) get a Dungeonscipt 3D voxel:
+      <br />
+      <textarea id="txt2" cols="60" rows="30"></textarea>
+    </label>
+  </body>
+</html>
